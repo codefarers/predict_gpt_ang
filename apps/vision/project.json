@@ -15,8 +15,13 @@
         "main": "apps/vision/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/vision/tsconfig.app.json",
-        "assets": ["apps/vision/src/assets"],
-        "styles": ["apps/vision/src/styles.scss"],
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/vision/public"
+          }
+        ],
+        "styles": ["apps/vision/src/styles.scss"]
       },
       "configurations": {
         "production": {

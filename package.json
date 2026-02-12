@@ -44,6 +44,7 @@
     "@vitest/ui": "^3.0.0",
     "angular-eslint": "^20.0.0",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "jiti": "2.4.2",

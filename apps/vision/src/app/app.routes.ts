@@ -29,8 +29,8 @@ export const appRoutes: Route[] = [
     path: 'logout',
     component: LogoutScreen,
   },
-  {
-    path: '**',
-    component: NotFound,
-  }
+  // {
+  //   path: '**',
+  //   component: NotFound,
+  // }
 ];
