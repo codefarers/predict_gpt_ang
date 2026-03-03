@@ -7,7 +7,7 @@ import { environment } from '../../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class KeycloakService {
+export class CloakService {
   private _keycloak!: Keycloak;
 
   private _authenticatedSubject = new BehaviorSubject<boolean | undefined>(undefined);

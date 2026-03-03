@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { KeycloakService } from '../../core/auth/keyCloakService/keycloak-service';
+import { CloakService } from '../../core/auth/keyCloakService/keycloak-service';
 import { LOGIN_CONSTANTS } from './constants/login-constants';
 
 @Component({
@@ -76,10 +76,10 @@ import { LOGIN_CONSTANTS } from './constants/login-constants';
   styleUrl: '../../vision-styles/login-page/login.component.scss',
 })
 export class LoginComponent {
-  private _keyCloakService = inject(KeycloakService);
+  private _cloakService = inject(CloakService);
   loginConstants = LOGIN_CONSTANTS;
 
   loginWithKeycloak(): void {
-    this._keyCloakService.login();
+    this._cloakService.login();
   }
 }
