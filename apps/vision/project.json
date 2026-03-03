@@ -77,7 +77,7 @@
       "options": {
         "command": "jest --config apps/vision/jest.config.ts"
       }
-    }
+    },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
