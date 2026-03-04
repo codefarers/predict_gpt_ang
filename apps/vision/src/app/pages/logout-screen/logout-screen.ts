@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { KeycloakService } from '../../core/auth/keyCloakService/keycloak-service';
+import { CloakService } from '../../core/auth/keyCloakService/keycloak-service';
 
 @Component({
   selector: 'app-logout-screen',
@@ -7,8 +7,8 @@ import { KeycloakService } from '../../core/auth/keyCloakService/keycloak-servic
   template: ` <p>logging out...</p> `,
 })
 export class LogoutScreen {
-  private _keyCloakService = inject(KeycloakService);
+  private _cloakService = inject(CloakService);
   constructor() {
-    this._keyCloakService.logout();
+    this._cloakService.logout();
   }
 }

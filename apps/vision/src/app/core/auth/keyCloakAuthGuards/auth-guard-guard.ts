@@ -1,10 +1,10 @@
 import { CanActivateFn } from '@angular/router';
 import { inject } from '@angular/core';
-import { KeycloakService } from '../keyCloakService/keycloak-service';
+import { CloakService } from '../keyCloakService/keycloak-service';
 import { filter, map, take, tap } from 'rxjs';
 
 export const authGuardGuard: CanActivateFn = () => {
-  const keyCloak = inject(KeycloakService);
+  const keyCloak = inject(CloakService);
 
   return keyCloak.authenticated$.pipe(
     filter(auth => auth !==null),

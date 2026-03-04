@@ -11,6 +11,7 @@
     "isolatedModules": true,
     "emitDecoratorMetadata": false,
     "module": "preserve",
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
