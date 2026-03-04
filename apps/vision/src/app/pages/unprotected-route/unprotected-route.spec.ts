@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import 'zone.js';
+import 'zone.js/testing';
 
 import { UnprotectedRoute } from './unprotected-route';
 
