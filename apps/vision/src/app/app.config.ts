@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { appRoutes } from './app.routes';
 import { provideRouter } from '@angular/router';
-import { KeycloakService } from './core/auth/keyCloakService/keycloak-service';
+import { CloakService } from './core/auth/keyCloakService/keycloak-service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,8 +15,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideAppInitializer(() => {
-      const keycloakService = inject(KeycloakService);
-      return keycloakService.init();
+      const cloakService = inject(CloakService);
+      return cloakService.init();
     }),
   ],
 };
