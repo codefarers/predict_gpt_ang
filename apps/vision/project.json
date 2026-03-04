@@ -73,10 +73,9 @@
       "executor": "@nx/eslint:lint"
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "executor": "nx:run-commands",
       "options": {
-        "reportsDirectory": "../../coverage/apps/vision"
+        "command": "jest --config apps/vision/jest.config.ts"
       }
     },
     "serve-static": {
