@@ -7,4 +7,5 @@ import 'zone.js/testing';
   imports: [],
   template: ` <h1>Main Page</h1> `,
 })
-export class MainPage {}
+export class MainPage {
+}
