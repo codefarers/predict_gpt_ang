@@ -3,7 +3,6 @@ import { MainPage } from './pages/main-page/main-page';
 import { ProtectedRoute } from './pages/protected-route/protected-route';
 import { UnprotectedRoute } from './pages/unprotected-route/unprotected-route';
 import { LogoutScreen } from './pages/logout-screen/logout-screen';
-import { NotFound } from './pages/not-found/not-found';
 import { authGuardGuard } from './core/auth/keyCloakAuthGuards/auth-guard-guard';
 import { LoginComponent } from './features/login/login.component';
 
