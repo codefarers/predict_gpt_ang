@@ -1,30 +1,16 @@
 @use '../vision-variables/variables' as *;
 
 .vision-login-bg {
-  background: radial-gradient(
-    circle at center,
-    $vision_dark_green 0%,
-    $vision_navy_green 70%
-  );
-}
-
-.vision-login-card {
-  background: #fff;
-  border: 1px solid $vision_light_green;
+  background-color: $vision_background_darker_white_shade;
 }
 
 .vision-logo {
-  height: $unit_size * 8;
-  width: $unit_size * 8;
+  height: $unit_size * 6;
+  width: $unit_size * 6;
 }
-
-.login-keycloak-btn{
-  background: $vision_green_button_lighter;
-  &:hover{
-    background: $vision_green_button_darker;
+.vision-green-btn {
+  background-color: $vision_green;
+  &:hover {
+    background-color: $vision_darker_green;
   }
-}
-
-.vision-network-info-cards{
-  color: $vision_green_button_darker;
-}
+};

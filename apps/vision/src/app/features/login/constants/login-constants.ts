@@ -1,14 +1,14 @@
 export const LOGIN_CONSTANTS = [
   {
-    info: '24/7',
-    title: 'LIVE ODDS',
+    title: '24/7',
+    info: 'LIVE ODDS',
   },
   {
-    info: '50+',
-    title: 'LEAGUES',
+    title: '50+',
+    info: 'LEAGUES',
   },
   {
-    info: 'Insta',
-    title: 'UPDATES',
+    title: 'Insta',
+    info: 'UPDATES',
   },
 ];
