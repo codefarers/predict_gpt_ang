@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.vision-nav-logo {
+  height: $unit-size * 5;
+  width: $unit-size * 5;
+}
+
+.nav-profile-icon {
+  &:hover {
+    color: black !important;
+  }
+}

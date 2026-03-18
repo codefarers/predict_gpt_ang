@@ -38,7 +38,7 @@ export class CloakService {
 
   login(): void {
     this._keycloak.login({
-      redirectUri: window.location.origin + '/protected',
+      redirectUri: window.location.origin + '/football-matches',
     });
   }
 
