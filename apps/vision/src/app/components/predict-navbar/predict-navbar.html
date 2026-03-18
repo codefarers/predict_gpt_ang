@@ -1,0 +1,28 @@
+<div class="border-bottom bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <section class="d-flex">
+      <img
+        src="/vision-images/transparent_vision_logo.png"
+        alt="predictor logo"
+        class="vision-nav-logo"
+      />
+      <nav class="nav d-flex align-items-center matches-league-types-nav">
+        @for (item of navBarLinkItems; track item.linkText) {
+        <a
+          class="nav-link"
+          routerLinkActive="text-dark fw-bold"
+          [routerLink]="item.link"
+          [class.text-muted]="!rla.isActive"
+          [routerLinkActiveOptions]="{exact:true}"
+          #rla="routerLinkActive"
+        >
+          {{ item.linkText }}
+        </a>
+        }
+      </nav>
+    </section>
+    <section>
+      <i class="bi bi-person-circle fs-3 text-secondary nav-profile-icon cursor-pointer"></i>
+    </section>
+  </div>
+</div>

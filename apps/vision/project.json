@@ -21,7 +21,10 @@
             "input": "apps/vision/public"
           }
         ],
-        "styles": ["apps/vision/src/styles.scss"]
+        "styles": [
+          "apps/vision/src/styles.scss",
+          "apps/vision/src/app/vision-styles/index.scss"
+        ]
       },
       "configurations": {
         "production": {

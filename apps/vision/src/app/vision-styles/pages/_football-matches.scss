@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+.vision-matches-layout {
+  background-color: $vision-background-blue;
+}
+
+.matches-league-links {
+  &.active {
+    background-color: #fff;
+  }
+}

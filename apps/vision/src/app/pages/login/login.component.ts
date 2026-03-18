@@ -75,7 +75,7 @@ import { LOGIN_CONSTANTS } from './constants/login-constants';
       </div>
     </div>
   `,
-  styleUrl: '../../vision-styles/login-page/login.component.scss',
+  styleUrl: '../../vision-styles/pages/_login.scss',
 })
 export class LoginComponent {
   private _cloakService = inject(CloakService);
