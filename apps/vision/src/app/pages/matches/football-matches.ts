@@ -7,6 +7,7 @@ import {
 
 import { PredictNavbar } from '../../components/predict-navbar/predict-navbar';
 import { LEAGUE_NAMES } from './helpers/constants';
+import { SliceState } from './models/models';
 
 @Component({
   selector: 'app-football-matches',
@@ -25,7 +26,7 @@ import { LEAGUE_NAMES } from './helpers/constants';
             <nav class="nav d-flex align-items-center gap-2">
               @for (item of _leagueTypes; track item.linkText) {
                 <div
-                  class="border rounded small matches-league-links d-flex align-items-center py-2 px-3 gap-2"
+                  class="border rounded small matches-league-links d-flex align-items-center p-3 gap-2"
                   [class.bg-dark]="rla.isActive"
                   [class.border-0]="rla.isActive"
                 >
