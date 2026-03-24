@@ -14,7 +14,16 @@ export const FootballMatchesRoutes: Routes = [
       {
         path: 'all-leagues',
         loadComponent: () =>
-          import('./matches-list/matches-list').then((m) => m.MatchesList),
+          import('./views/matches-list/matches-list').then(
+            (m) => m.MatchesList,
+          ),
+      },
+      {
+        path: 'premier-league',
+        loadComponent: () =>
+          import('./views/matches-premier-league/matches-premier-league').then(
+            (m) => m.MatchesPremierLeague,
+          ),
       },
     ],
   },

@@ -66,7 +66,7 @@ export class FootballControllerService extends BaseService {
 
     const localVarHttpHeaderAcceptSelected: string | undefined =
       options?.httpHeaderAccept ??
-      this.configuration.selectHeaderAccept(['*/*']);
+      this.configuration.selectHeaderAccept(['application/json']);
 
     if (localVarHttpHeaderAcceptSelected !== undefined) {
       localVarHeaders = localVarHeaders.set(
