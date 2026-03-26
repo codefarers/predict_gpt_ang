@@ -3,36 +3,36 @@ import { Param } from './param';
 import { OpenApiHttpParams } from './query.params';
 
 export interface ConfigurationParameters {
-    /**
-     *  @deprecated Since 5.0. Use credentials instead
-     */
-    apiKeys?: {[ key: string ]: string};
-    username?: string;
-    password?: string;
-    /**
-     *  @deprecated Since 5.0. Use credentials instead
-     */
-    accessToken?: string | (() => string);
-    basePath?: string;
-    withCredentials?: boolean;
-    /**
-     * Takes care of encoding query- and form-parameters.
-     */
-    encoder?: HttpParameterCodec;
-    /**
-     * Override the default method for encoding path parameters in various
-     * <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#style-values">styles</a>.
-     * <p>
-     * See {@link README.md} for more details
-     * </p>
-     */
-    encodeParam?: (param: Param) => string;
-    /**
-     * The keys are the names in the securitySchemes section of the OpenAPI
-     * document. They should map to the value used for authentication
-     * minus any standard prefixes such as 'Basic' or 'Bearer'.
-     */
-    credentials?: {[ key: string ]: string | (() => string | undefined)};
+  /**
+   *  @deprecated Since 5.0. Use credentials instead
+   */
+  apiKeys?: { [key: string]: string };
+  username?: string;
+  password?: string;
+  /**
+   *  @deprecated Since 5.0. Use credentials instead
+   */
+  accessToken?: string | (() => string);
+  basePath?: string;
+  withCredentials?: boolean;
+  /**
+   * Takes care of encoding query- and form-parameters.
+   */
+  encoder?: HttpParameterCodec;
+  /**
+   * Override the default method for encoding path parameters in various
+   * <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#style-values">styles</a>.
+   * <p>
+   * See {@link README.md} for more details
+   * </p>
+   */
+  encodeParam?: (param: Param) => string;
+  /**
+   * The keys are the names in the securitySchemes section of the OpenAPI
+   * document. They should map to the value used for authentication
+   * minus any standard prefixes such as 'Basic' or 'Bearer'.
+   */
+  credentials?: { [key: string]: string | (() => string | undefined) };
 }
 
 export class Configuration {

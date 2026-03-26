@@ -9,15 +9,15 @@ export const LEAGUE_NAMES = [
   },
   {
     linkText: 'La Liga',
-    link: 'la-liga',
+    link: 'laliga',
   },
   {
     linkText: 'Bundesliga',
     link: 'bundesliga',
   },
   {
-    linkText: 'Ligue 1',
-    link: 'ligue1',
+    linkText: 'Ligue One',
+    link: 'ligue-one',
   },
   {
     linkText: 'Champions leagues',

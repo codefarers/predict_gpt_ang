@@ -25,6 +25,27 @@ export const FootballMatchesRoutes: Routes = [
             (m) => m.MatchesPremierLeague,
           ),
       },
+      {
+        path: 'bundesliga',
+        loadComponent: () =>
+          import('./views/bundesliga-view/bundesliga-view').then(
+            (m) => m.BundesligaView,
+          ),
+      },
+      {
+        path: 'laliga',
+        loadComponent: () =>
+          import('./views/matches-laliga-view/matches-laliga-view').then(
+            (m) => m.MatchesLaligaView,
+          ),
+      },
+      {
+        path: 'ligue-one',
+        loadComponent: () =>
+          import('./views/ligue-one-view/ligue-one-view').then(
+            (m) => m.LigueOneView,
+          ),
+      },
     ],
   },
 ];

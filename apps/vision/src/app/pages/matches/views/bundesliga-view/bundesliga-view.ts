@@ -1,20 +1,23 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { finalize, take } from 'rxjs';
-import { FootballControllerService } from '../../../../predict_http_api/getAllMatchesApi/services/footballController.service';
+import { Component, inject, signal } from '@angular/core';
+import {
+  BundesligaMatchesControllerService
+} from '../../../../predict_http_api/getAllMatchesApi/services/bundesligaMatchesController.service';
 import { SliceState } from '../../models/models';
 import { Match } from '../../../../predict_http_api';
+import { finalize, take } from 'rxjs';
 import { MatchesCard } from '../../compoonents/matches-card/matches-card';
 
 @Component({
-  selector: 'app-matches-premier-league',
+  selector: 'app-bundesliga-view',
   imports: [MatchesCard],
-  template: ` <app-matches-card [matchState]="premierLeagueMatchState()">
+  template: `<app-matches-card [matchState]="bundesligaMatchState()">
   </app-matches-card>`,
+  styles: ``,
 })
-export class MatchesPremierLeague implements OnInit {
-  private _premierLeagueMatchService = inject(FootballControllerService);
+export class BundesligaView {
+  private _bundesligaService = inject(BundesligaMatchesControllerService);
 
-  readonly premierLeagueMatchState = signal<
+  readonly bundesligaMatchState = signal<
     SliceState<{
       match: Match[];
       tournamentImage: string;
@@ -25,12 +28,12 @@ export class MatchesPremierLeague implements OnInit {
   });
 
   ngOnInit() {
-    this._premierLeagueMatchService
-      .getMatches()
+    this._bundesligaService
+      .getBundesligaMatches()
       .pipe(
         take(1),
         finalize(() => {
-          this.premierLeagueMatchState.update((state) => ({
+          this.bundesligaMatchState.update((state) => ({
             ...state,
             loading: false,
           }));
@@ -38,7 +41,7 @@ export class MatchesPremierLeague implements OnInit {
       )
       .subscribe({
         next: (response) => {
-          this.premierLeagueMatchState.update((state) => ({
+          this.bundesligaMatchState.update((state) => ({
             ...state,
             data: {
               match: response.matches ?? [],
@@ -47,7 +50,7 @@ export class MatchesPremierLeague implements OnInit {
           }));
         },
         error: () => {
-          this.premierLeagueMatchState.update((state) => ({
+          this.bundesligaMatchState.update((state) => ({
             ...state,
             loading: false,
             hasError: true,
