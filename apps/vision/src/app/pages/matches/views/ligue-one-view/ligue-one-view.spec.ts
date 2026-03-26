@@ -1,24 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 
-import { MatchesPremierLeague } from './matches-premier-league';
+import { LigueOneView } from './ligue-one-view';
 import 'zone.js';
 import 'zone.js/testing';
 
-
-describe('MatchesPremierLeague', () => {
-  let component: MatchesPremierLeague;
-  let fixture: ComponentFixture<MatchesPremierLeague>;
+describe('LigueOneView', () => {
+  let component: LigueOneView;
+  let fixture: ComponentFixture<LigueOneView>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatchesPremierLeague],
-      providers: [
-        provideHttpClient()
-      ]
+      imports: [LigueOneView],
+      providers: [provideHttpClient()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MatchesPremierLeague);
+    fixture = TestBed.createComponent(LigueOneView);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
