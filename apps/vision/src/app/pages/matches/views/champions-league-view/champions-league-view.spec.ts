@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChampionsLeagueView } from './champions-league-view';
+import 'zone.js';
+import 'zone.js/testing';
 
 describe('ChampionsLeagueView', () => {
   let component: ChampionsLeagueView;

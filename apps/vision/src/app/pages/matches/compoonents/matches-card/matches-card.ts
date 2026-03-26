@@ -3,6 +3,8 @@ import { DatePipe } from '@angular/common';
 import { SliceState } from '../../models/models';
 import { Match } from '../../../../predict_http_api';
 import { MATCH_STATUS } from '../../helpers/enum';
+import 'zone.js';
+import 'zone.js/testing';
 
 @Component({
   selector: 'app-matches-card',

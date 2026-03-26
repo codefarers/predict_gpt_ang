@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatchesCard } from './matches-card';
+import { signal } from '@angular/core';
 
 describe('MatchesCard', () => {
   let component: MatchesCard;
@@ -12,6 +13,11 @@ describe('MatchesCard', () => {
 
     fixture = TestBed.createComponent(MatchesCard);
     component = fixture.componentInstance;
+    component.matchState = signal({
+      data: null,
+      loading: false,
+      hasError: false,
+    }) as any;
     fixture.detectChanges();
   });
 

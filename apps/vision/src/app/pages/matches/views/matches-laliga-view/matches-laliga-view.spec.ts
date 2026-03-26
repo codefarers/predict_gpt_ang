@@ -1,5 +1,9 @@
+import { provideHttpClient } from '@angular/common/http';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatchesLaligaView } from './matches-laliga-view';
+import 'zone.js';
+import 'zone.js/testing';
 
 describe('MatchesLaligaView', () => {
   let component: MatchesLaligaView;
@@ -8,6 +12,7 @@ describe('MatchesLaligaView', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MatchesLaligaView],
+      providers: [provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MatchesLaligaView);

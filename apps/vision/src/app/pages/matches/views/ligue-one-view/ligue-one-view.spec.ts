@@ -1,5 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+
 import { LigueOneView } from './ligue-one-view';
+import 'zone.js';
+import 'zone.js/testing';
 
 describe('LigueOneView', () => {
   let component: LigueOneView;
@@ -8,6 +12,7 @@ describe('LigueOneView', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LigueOneView],
+      providers: [provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LigueOneView);
