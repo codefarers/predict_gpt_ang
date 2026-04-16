@@ -3,14 +3,14 @@ import type { Config } from 'jest';
 const config: Config = {
   preset: 'jest-preset-angular',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   moduleFileExtensions: ['ts', 'js', 'html', 'json'],
   transformIgnorePatterns: ['node_modules/(?!(@angular|rxjs|keycloak-js)/)'],
+
   moduleNameMapper: {
-    '^@vision/environments$':
-      '<rootDir>/../../libs/packages/environments/index',
-    '^@vision/vision-http-ang$':
-      '<rootDir>/../../libs/packages/shared/predict_http_api/index',
+    '^@vision/vision-http-ang$': '<rootDir>/shared/predict_http_api/index.ts',
+    '^@vision/vision-home-page$':
+      '<rootDir>/libs/packages/pages/vision-home-poge/src/index.ts',
   },
 };
 
