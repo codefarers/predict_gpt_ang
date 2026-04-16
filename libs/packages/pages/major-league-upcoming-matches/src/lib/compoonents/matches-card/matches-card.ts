@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-import { Match } from '../../../../../../shared/predict_http_api/src/lib/getAllMatchesApi/models/match';
+import { Match } from '@vision/vision-http-ang';
 
 import { SliceState } from '../../models/models';
 import { MATCH_STATUS } from '../../helpers/enum';

@@ -2,8 +2,10 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 
 import { finalize, take } from 'rxjs';
 
-import { BundesligaMatchesControllerService } from '../../../../../../shared/predict_http_api/index';
-import { Match } from '../../../../../../shared/predict_http_api/src/lib/getAllMatchesApi/models/match';
+import {
+  BundesligaMatchesControllerService,
+  Match,
+} from '@vision/vision-http-ang';
 
 import { SliceState } from '../../models/models';
 import { MatchesCard } from '../../compoonents/matches-card/matches-card';

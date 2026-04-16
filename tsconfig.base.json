@@ -16,10 +16,13 @@
     "baseUrl": ".",
     "paths": {
       "@vision/packages": ["libs/packages/src/index.ts"],
+      "predict-http": [
+        "libs/packages/shared/predict_http_api/src/index.ts"
+      ],
       "@vision/major-league-matches": ["libs/packages/pages/major-league-upcoming-matches/src/index.ts"],
       "@vision/not-found-page": ["libs/packages/pages/not-found/src/index.ts"],
       "@vision/vision-home-page": ["libs/packages/pages/vision-home-page/src/index.ts"],
-      "@vision/vision-http-ang": ["libs/packages/shared/predict_http_api/index.ts"]
+      "@vision/vision-http-ang": ["predictHttpService/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -9,8 +9,7 @@ const config: Config = {
   moduleNameMapper: {
     '^@vision/environments$':
       '<rootDir>/../../libs/packages/environments/index',
-    '^@vision/vision-http-ang$':
-      '<rootDir>/../../libs/packages/shared/predict_http_api/index',
+    '^@vision/vision-http-ang$': '<rootDir>/predictHttpService/index.ts',
   },
 };
 

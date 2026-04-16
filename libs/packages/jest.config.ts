@@ -8,7 +8,7 @@ const config: Config = {
   transformIgnorePatterns: ['node_modules/(?!(@angular|rxjs|keycloak-js)/)'],
 
   moduleNameMapper: {
-    '^@vision/vision-http-ang$': '<rootDir>/shared/predict_http_api/index.ts',
+    '^@vision/vision-http-ang$': '<rootDir>/../../predictHttpService/index.ts',
     '^@vision/vision-home-page$':
       '<rootDir>/libs/packages/pages/vision-home-poge/src/index.ts',
   },
