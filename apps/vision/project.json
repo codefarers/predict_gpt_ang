@@ -4,7 +4,8 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/vision/src",
-  "tags": [],
+
+  "tags": ["scope:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

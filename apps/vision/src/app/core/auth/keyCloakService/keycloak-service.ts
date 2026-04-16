@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, from, map, Observable, tap } from 'rxjs';
 import Keycloak from 'keycloak-js';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -38,7 +38,7 @@ export class CloakService {
 
   login(): void {
     this._keycloak.login({
-      redirectUri: window.location.origin + '/football-matches',
+      redirectUri: window.location.origin + '/football-major-league-upcoming-matches',
     });
   }
 
