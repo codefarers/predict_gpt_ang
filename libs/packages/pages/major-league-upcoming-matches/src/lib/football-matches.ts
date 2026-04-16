@@ -5,7 +5,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 
-import { PredictNavbar } from '../../../../shared/features/predict-navbar/predict-navbar';
+import { PredictNavbar } from './compoonents/predict-navbar/predict-navbar';
 import { LEAGUE_NAMES } from './helpers/constants';
 
 @Component({
